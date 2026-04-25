@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camelize</title>
+</head>
+<body>
+    <script>
+
+        function camelize(str) {
+
+            //this only works for 2 words dashed
+            //but now its better
+
+
+            /* it needs to work for if dash is found, 
+                capitalize the next letter...
+            
+                So here is the pseudocode...
+            */
+
+            
+            //split string into array
+
+            str = str.split("");
+                
+            //look for dash in array,
+
+            for (let i = 0; i < str.length; i++) {
+
+
+                if (str[i] == "-") {
+
+
+                //if found, repeat capitalization of the element one index ahead 
+                
+                    str[i + 1] = str[i + 1].toUpperCase();
+
+                //remove dash 
+
+                str[i] = "";
+
+                }
+
+            }
+                
+            //then join the whole array into string
+            
+            return str.join("");
+        }
+
+        console.log(camelize("background-color"));
+        console.log(camelize("list-style-image"));
+        console.log(camelize("-webkit-transition")); 
+
+    </script>
+</body>
+</html>
