@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camelize</title>
+</head>
+<body>
+    <script>
+
+        /* Please write comments about ]
+           you understood in this solution
+        */   
+
+        function camelize(str) {
+            return str
+                .split('-')
+                .map( (element, index) => index == 0 ? element : element[0].toUpperCase() + element.slice(1)
+             ).join("");
+        }
+
+        //what does element slice do?
+
+        // i forgot what map does
+        console.log(camelize("background-color"));
+        console.log(camelize("list-style-image"));
+        console.log(camelize("-webkit-transition")); 
+
+    </script>
+</body>
+</html>

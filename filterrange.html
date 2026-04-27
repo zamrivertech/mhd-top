@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Range</title>
+</head>
+<body>
+    
+    <script>
+
+        let arr = [5, 3, 8, 1];
+
+        let filtered = filterRange(arr, 1, 4);
+
+        function filterRange(arr, a, b) {
+
+
+
+            // Get array, look for elements
+
+            /* Value
+                higher or equal 
+                    to a in array */
+
+            // AND        
+
+            /* Value
+                lower or equal 
+                    to b */          
+                    
+            return arr.filter(number => number >= a && number <= b);
+            
+        }
+
+        console.log(filtered);
+
+        console.log(arr);
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
